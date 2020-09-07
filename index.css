@@ -1,0 +1,46 @@
+.common-styles {
+  display: flex;
+  justify-content: center;
+}
+.custom-html-container {
+  width: 600px;
+  height: 300px;
+  border: 2px solid #cccccc;
+}
+.add-margin {
+  margin-left: 10%;
+}
+.button {
+  justify-content: center;
+  text-align: center;
+}
+.btn-margin {
+  margin-left: 50%;
+}
+
+.custom-html-pgpblock {
+  width: 800px;
+  height: 400px;
+  border: 2px solid #cccccc;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.customAlign {
+  display: flex;
+  align-items: center;
+}
+
+.customCheckbox {
+  width: 30px;
+  height: 30px;
+}
+
+.marginLeft-20 {
+  margin-left: 30px;
+}
+
+form .error {
+  color: #ff0000;
+}
+

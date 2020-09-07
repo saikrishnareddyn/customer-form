@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="./openpgp.min.js"></script>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="text-center">Page Title</p>
+      <div class="common-styles">
+        <div class="custom-html-container">
+          <p class="text-center">custom HTML - custom information and text</p>
+        </div>
+      </div>
+      <div style="margin-top: 20px">
+        <h2 class="text-primary text-center">Bestellung aufgeben</h2>
+        <h6 class="text-primary">Customer Data:</h6>
+        <p>*= required</p>
+        <form action="#" name="customer_details" id="customer_details">
+          <div class="form-row">
+            <div class="col-md-1">
+              <label for="prename">
+                <strong class="text-primary control-label"> Prename* </strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="prename"
+                id="prename"
+                class="form-control"
+                placeholder="Vorname"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Surname*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                class="form-control"
+                placeholder=" Nachname"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Birthday*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="date"
+                name="birthday"
+                id="birthday"
+                class="form-control"
+                placeholder=" Datefield"
+              />
+            </div>
+          </div>
+          <h4 class="text-primary add-margin">Register Address</h4>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Street+Nr*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="rsteetNr"
+                name="rsteetNr"
+                placeholder=" street+Nr"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">ZIP code*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="rzipcode"
+                id="rzipcode"
+                class="form-control"
+                placeholder=" Zip"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">City*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="rcity"
+                name="rcity"
+                class="form-control"
+                placeholder=" city"
+              />
+            </div>
+          </div>
+          <h4 class="text-primary add-margin">Delivery Address:</h4>
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Name*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="dname"
+                name="dname"
+                class="form-control"
+                placeholder=" Name"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Lane2</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="dlane2"
+                id="dlname2"
+                class="form-control"
+                placeholder=" Lane2"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Street+Nr*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="dstreetNr"
+                id="dstreetNr"
+                class="form-control"
+                placeholder=" street+Nr"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">city*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="dcity"
+                id="dcity"
+                class="form-control"
+                placeholder="city"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Lane5</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="dlane5"
+                id="dlane5"
+                class="form-control"
+                placeholder=" Lane5"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Absender</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="absender"
+                id="absender"
+                class="form-control"
+                placeholder="Absender"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Zipcode*:</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="dzipcode"
+                id="dzipcode"
+                class="form-control"
+                placeholder="zipcode"
+              />
+            </div>
+          </div>
+          <br />
+          <h4 class="text-primary add-margin">Praparat:</h4>
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Praparat<br />Name*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="praparatName"
+                id="praparatName"
+                class="form-control"
+                placeholder=" PraparatName"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Hersteller*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="hersteller"
+                id="hersteller"
+                class="form-control"
+                placeholder=" Hersteller"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Darreichung*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                id="darreichung"
+                name="darreichung"
+                type="text"
+                class="form-control"
+                placeholder="Darreichung"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Wirkstoff<br />menge*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                id="wirkstoffmenge"
+                name="wirkstoffmenge"
+                type="text"
+                class="form-control"
+                placeholder=" Wirkstoffmenge"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Packungsg<br />roBe*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                id="packungsgrobe"
+                name="packungsgrobe"
+                type="text"
+                class="form-control"
+                placeholder=" PackungsgroBe"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">PZN*</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="pzn"
+                name="pzn"
+                class="form-control"
+                placeholder=" PZN"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check customAlign add-margin">
+              <input
+                class="form-check-input customCheckbox"
+                checked
+                type="checkbox"
+                id="isCustomMedicEnabled"
+              />
+              <label class="form-check-label">
+                <strong class="text-primary marginLeft-20">
+                  Custom Medic</strong
+                >
+              </label>
+            </div>
+          </div>
+          <br />
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Name</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="cmName"
+                name="cmName"
+                class="form-control"
+                placeholder=" Name"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Fachgebiet</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <select id="cmFachgebiet" class="form-control">
+                <option value="">optionselected</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">AddressLine1</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="cmAddressline1"
+                id="cmAddressline1"
+                class="form-control"
+                placeholder="AddressLine1"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Address<br />Line2</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="cmAddressline2"
+                name="cmAddressline2"
+                class="form-control"
+                placeholder=" AddressLine2"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">Tel</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                name="cmTel"
+                id="cmTel"
+                class="form-control"
+                placeholder=" Tel"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">FAX</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="cmFax"
+                name="cmFax"
+                class="form-control"
+                placeholder=" FAX"
+              />
+            </div>
+          </div>
+          <div class="form-row md-3">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">BSNR</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="cmBsnr"
+                name="cmBsnr"
+                class="form-control"
+                placeholder=" BSNR"
+              />
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">LANR</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <input
+                type="text"
+                id="cmLanr"
+                name="cmLanr"
+                class="form-control"
+                placeholder=" LANR"
+              />
+            </div>
+          </div>
+          <!-- <h4 class="text-primary add-margin">[] Databse Medic</h4> -->
+          <div class="form-group">
+            <div class="form-check customAlign add-margin">
+              <input
+                class="form-check-input customCheckbox"
+                id="isDatabaseMedic"
+                type="checkbox"
+              />
+              <label class="form-check-label">
+                <strong class="text-primary marginLeft-20"
+                  >Database Medic</strong
+                >
+              </label>
+            </div>
+          </div>
+          <br />
+          <div class="form-row">
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">1.Fachge<br />biet</strong>
+              </label>
+            </div>
+            <div class="col-md-5 mb-3">
+              <select
+                class="form-control"
+                name="dmFachgebiet"
+                id="dmFachgebiet"
+                disabled
+              ></select>
+            </div>
+            <div class="col-md-1">
+              <label>
+                <strong class="text-primary">LANR</strong>
+              </label>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <input
+                type="text"
+                id="dmLanr"
+                name="dmLanr"
+                class="form-control"
+                disabled
+                placeholder=" LANR"
+              />
+            </div>
+            <br />
+            <br />
+            <div class="btn btn-margin">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-1">
+              <label> <strong class="text-primary"> DATA</strong></label>
+            </div>
+            <div class="common-styles custom-html-pgpblock">
+              <p class="text-center">
+                General Tectbox ONLY copy PGP Block- no-edit of data possible
+                here
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
